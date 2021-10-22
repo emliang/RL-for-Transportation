@@ -38,34 +38,38 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 #### Order dispatching
 1. [A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](https://dl.acm.org/doi/pdf/10.1145/3097983.3098138)
     1. predict cancellation probability of vehicle-order pair $p_{ij}$
-    2. maximize total success rate: $$\left\{\begin{array}{l}
-\max _{a_{i j}} E_{S R}=\frac{\sum_{i=1}^{N}\left[1-\prod_{j=1}^{M}\left(1-p_{i j}\right)^{a_{i j}}\right]}{N} \\
-\text { s.t. } \forall j, \sum_{i=1}^{N} a_{i j} \leq 1, a_{i j} \in\{0,1\}\end{array}\right.$$
+    2. maximize total success rate: 
+        ![](2021-10-22-18-09-24.png)
         1. $a_{ij}$: matching decision
         2. NP hard combinatorial optimization
            1. HillClimbing Algorithm
-1. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. (2018). KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
+2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. (2018). KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
    1. bipartite matching
- $$\begin{array}{ll}
-\underset{a_{i j}}{\operatorname{argmax}}& \sum_{i=1}^{m} \sum_{j=1}^{n} A_{\pi}(i, j) a_{i j} \\
-\text { s.t. } & \sum_{i=1}^{m} a_{i j} \leq 1, \quad j=1,2,3 \ldots, n \\
-& \sum_{j=1}^{n} a_{i j} \leq 1, \quad i=1,2,3 \ldots, m\end{array}$$
-       1. state: time & space zone (no contextual information)
-       2. weight: discounted reward + furture value
+![](2021-10-22-18-09-56.png)
+       1. weight: advantage trick
+          1. discounted reward + furture value - current value 
+          ![](2021-10-22-18-11-17.png)
+       2. state: time & space zone (no contextual information)
        3. value: policy evaluation (offline)
+          
 
 1. [A Deep Value-network Based Approach for Multi-Driver Order Dispatching. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330724)
    1. bipartite matching
    ![](2021-10-22-17-57-56.png)
-      1. weight: discounted reward + furture value
-      2. value: time & space zone + supply-demand info
-         1. policy evaluation + distillation (offline)
+      1. weight: advantage value - distance
+        ![](2021-10-22-18-13-36.png)
+      2. state: 
+         1. time & space zone + supply-demand info
          2. coarse coding with hierarchical hexagon grid
+      3. value (offline)
+         1. policy evaluation: with supply-demand info
+         2. distillation: marginalize time-space value
 
 2. [Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning. 2019. WWW](https://dl.acm.org/doi/pdf/10.1145/3308558.3313433)
-    1. 
+    1. MARL 
 
 3. [Multi-Agent Reinforcement Learning for Order-dispatching via Order-Vehicle Distribution Matching. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357799)
+   1. MARL
 
 #### Order delaying
 1. [Learning to delay in ride-sourcing systems: a multi-agent deep reinforcement learning framework. 2019. TKDE](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9130935)
