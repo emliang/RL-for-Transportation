@@ -5,8 +5,12 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 ## Ride-souring system
 ### Survey
 1. [Reinforcement Learning for Ridesharing: A Survey. 2021](https://arxiv.org/pdf/2105.01099)
+### Dataset
+1. [DiDi GAIA Dataset](https://outreach.didichuxing.com/research/opendata/)
+### Competition
+1. [Learning to Dispatch and Reposition on a Mobility-on-Demand Platform](https://www.biendata.xyz/competition/kdd_didi/)
 ### Book
-1. Approximate Dynamic Programming: Solving the curses of dimensionality. Powell, W. B. (2007). .
+1. Approximate Dynamic Programming: Solving the curses of dimensionality. Powell, W. B. (2007).
    
 ### Paper
 #### Order dispatching
@@ -24,8 +28,14 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 1. [Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining. 2018. Big Data](https://ieeexplore.ieee.org/document/8622481)
 2. [DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](https://ieeexplore.ieee.org/abstract/document/8793143)
 3. [AdaPool: A Diurnal-Adaptive Fleet Management Framework using Model-Free Deep Reinforcement Learning and Change Point Detection. 2021.](https://arxiv.org/pdf/2104.00203.pdf)
+4. [An Integrated Decomposition and Approximate Dynamic Programming Approach for On-Demand Ride Pooling. 2018. ITS](https://ieeexplore.ieee.org/document/8805157)
+5. [Neural Approximate Dynamic Programming for On-Demand Ride-Pooling. 2020. AAAI](https://ojs.aaai.org//index.php/AAAI/article/view/5388)
+
+
+
 #### Order pricing
 1. [InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](https://ieeexplore.ieee.org/document/8970929)
+2. [Path-based dynamic pricing for vehicle allocation in ridesharing systems with fully compliant drivers. 2019. TRB](https://www.sciencedirect.com/science/article/pii/S019126151831141X)
 
 
 #### Vehicle relocation
@@ -58,5 +68,11 @@ Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
 
 
 ## Intersection control
-### survey 
+### Survey 
+1. [Recent advances in reinforcement learning for traffic signal control: A survey of models and evaluation. 2021](https://dl.acm.org/doi/pdf/10.1145/3447556.3447565)
+### Dataset 
+1. [Reinforcement Learning for Traffic Signal Control
+](https://traffic-signal-control.github.io/#open-datasets)
+### Competition
+1. [City Brain Challenge](http://www.yunqiacademy.org/poster)
 
