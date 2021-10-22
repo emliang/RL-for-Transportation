@@ -3,32 +3,32 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 [toc]
 
 ## Ride-souring system
-### survey
+### Survey
 1. [Reinforcement Learning for Ridesharing: A Survey. 2021](https://arxiv.org/pdf/2105.01099)
-### book
+### Book
 1. Approximate Dynamic Programming: Solving the curses of dimensionality. Powell, W. B. (2007). .
    
-### paper
-#### order dispatching
+### Paper
+#### Order dispatching
 1. [A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](https://dl.acm.org/doi/pdf/10.1145/3097983.3098138)
 2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. (2018). KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
 3. [A Deep Value-network Based Approach for Multi-Driver Order Dispatching. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330724)
 4. [Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning. 2019. WWW](https://dl.acm.org/doi/pdf/10.1145/3308558.3313433)
 5. [Multi-Agent Reinforcement Learning for Order-dispatching via Order-Vehicle Distribution Matching. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357799)
 
-#### order delaying
+#### Order delaying
 1. [Learning to delay in ride-sourcing systems: a multi-agent deep reinforcement learning framework. 2019. TKDE](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9130935)
 2. [Optimizing matching time intervals for ride-hailing services using reinforcement learning. 2021. TRC](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21002527)
    
-#### order pooling
+#### Order pooling
 1. [Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining. 2018. Big Data](https://ieeexplore.ieee.org/document/8622481)
 2. [DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](https://ieeexplore.ieee.org/abstract/document/8793143)
 3. [AdaPool: A Diurnal-Adaptive Fleet Management Framework using Model-Free Deep Reinforcement Learning and Change Point Detection. 2021.](https://arxiv.org/pdf/2104.00203.pdf)
-#### order pricing
+#### Order pricing
 1. [InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](https://ieeexplore.ieee.org/document/8970929)
 
 
-#### vehicle relocation
+#### Vehicle relocation
 1. [A Cost-Effective Recommender System for Taxi Drivers. 2014. KDD](https://dl.acm.org/doi/pdf/10.1145/2623330.2623668)
 2. [MOVI: A Model-Free Approach to Dynamic Fleet Management. 2018. INFOCOM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8485988)
 3. [Credit Assignment For Collective Multiagent RL With Global Rewards. 2018. NIPS](https://proceedings.neurips.cc/paper/2018/file/94bb077f18daa6620efa5cf6e6f178d2-Paper.pdf)
@@ -40,7 +40,7 @@ Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
 
 
 
-#### joint matching and relocation
+#### Joint dispatching and relocation
 1. [CoRide: Joint Order Dispatching and Fleet Management for Multi-Scale Ride-Hailing Platforms. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357978)
 
 2. [Deep Reinforcement Learning for Multi-Driver Vehicle Dispatching and Repositioning Problem. 2019. ICDM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8970873)
