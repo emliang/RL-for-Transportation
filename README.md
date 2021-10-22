@@ -19,6 +19,8 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     - [Dataset](#dataset-1)
     - [Competition](#competition-1)
     - [Paper](#paper-1)
+      - [Single-agent](#single-agent)
+      - [Multi-agent](#multi-agent)
 
 
 
@@ -89,11 +91,31 @@ Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
 
 ## Intersection control
 ### Survey 
-1. [Recent advances in reinforcement learning for traffic signal control: A survey of models and evaluation. 2021](https://dl.acm.org/doi/pdf/10.1145/3447556.3447565)
+1. [A survey on traffic signal control methods. 2019](https://arxiv.org/pdf/1904.08117.pdf)
+2. [Recent advances in reinforcement learning for traffic signal control: A survey of models and evaluation. 2021](https://dl.acm.org/doi/pdf/10.1145/3447556.3447565)
 ### Dataset 
-1. [Reinforcement Learning for Traffic Signal Control
+1. [Cityflow: A multi-agent reinforcement learning environment for large scale city traffic scenario](https://dl.acm.org/doi/pdf/10.1145/3308558.3314139) 
+2. [Reinforcement Learning for Traffic Signal Control
 ](https://traffic-signal-control.github.io/#open-datasets)
 ### Competition
 1. [City Brain Challenge](http://www.yunqiacademy.org/poster)
 
 ### Paper
+
+#### Single-agent
+1. [IntelliLight: A Reinforcement Learning Approach for Intelligent Traffic Light Control. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3220096)
+2. [Learning Traffic Signal Control from Demonstrations. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3358079)
+3. [PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330949)
+4. [PDLight: A Deep Reinforcement Learning Traffic Light Control Algorithm with Pressure and Dynamic Light Duration. 2020](https://arxiv.org/pdf/2009.13711.pdf)
+5. [Toward A Thousand Lights: Decentralized Deep Reinforcement Learning for Large-Scale Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/download/5744/5600)
+6. [Learning Phase Competition for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357900)
+7. [AttendLight: Universal Attention-Based Reinforcement Learning Model for Traffic Signal Control. 2020. NIPS](https://arxiv.org/pdf/2010.05772.pdf)
+8. [GeneraLight: Improving Environment Generalization of Traffic Signal Control via Meta Reinforcement Learning. 2020. CIKM](https://dl.acm.org/doi/pdf/10.1145/3340531.3411859)
+9. [MetaLight: Value-Based Meta-Reinforcement Learning for Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/5467/5323)
+   
+#### Multi-agent
+1. [CoLight: Learning Network-level Cooperation for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357902)
+2. [Multi-agent Reinforcement Learning for Networked System Control. 2020. ICLR](https://arxiv.org/pdf/2004.01339.pdf)
+3. [Meta Variationally Intrinsic Motivated Reinforcement Learning for Decentralized Traffic Signal Control. 2021](https://arxiv.org/pdf/2101.00746.pdf)
+4. [Hierarchically and Cooperatively Learning Traffic Signal Control. 2021. AAAI](https://www.aaai.org/AAAI21Papers/AAAI-6437.XuB.pdf)
+
