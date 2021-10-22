@@ -44,7 +44,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
         2. NP hard combinatorial optimization
            1. HillClimbing Algorithm
 2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. (2018). KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
-   1. bipartite matching
+   1. bipartite matching + evaluation
 ![](2021-10-22-18-09-56.png)
        1. weight: advantage trick
           1. discounted reward + furture value - current value 
@@ -54,7 +54,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
           
 
 1. [A Deep Value-network Based Approach for Multi-Driver Order Dispatching. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330724)
-   1. bipartite matching
+   1. bipartite matching + policy evaluation
    ![](2021-10-22-17-57-56.png)
       1. weight: advantage value - distance
         ![](2021-10-22-18-13-36.png)
@@ -66,15 +66,38 @@ Paper list of Reinforcement Learning (RL) applied on transportation
          2. distillation: marginalize time-space value
 
 2. [Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning. 2019. WWW](https://dl.acm.org/doi/pdf/10.1145/3308558.3313433)
-    1. MARL 
-
+    1. MARL (on policy)
+         1. state: contextual information
+         2. acrion: active order pool
+            1. mean action: defined as number of neighbor drivers
+         3. reward:
+            1. order fare
+            2. pick distance
+            3. destination supply-demand gap
 3. [Multi-Agent Reinforcement Learning for Order-dispatching via Order-Vehicle Distribution Matching. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357799)
-   1. MARL
+    1. MARL (on policy)
+       1. state: contextual features
+       2. TD loss + KL regulizer
+   ![](2021-10-22-21-28-27.png)
+          1. regulizer: distribution between order and vehicles
+
 
 #### Order delaying
 1. [Learning to delay in ride-sourcing systems: a multi-agent deep reinforcement learning framework. 2019. TKDE](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9130935)
+    1. MARL (on policy)
+       1. state: contextual features
+       2. action: {0,1}, enter matching pool or not
+       3. reward: customer waiting time
+          1. weighted global + individual reward
+
 2. [Optimizing matching time intervals for ride-hailing services using reinforcement learning. 2021. TRC](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21002527)
-   
+   1. RL (off policy)
+      1. state: global grid-based state -> flatten
+      2. action: match or hold
+      3. reward:
+         1. matching wating time
+         2. pickup wiating time
+
 #### Order pooling
 1. [Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining. 2018. Big Data](https://ieeexplore.ieee.org/document/8622481)
 2. [DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](https://ieeexplore.ieee.org/abstract/document/8793143)
