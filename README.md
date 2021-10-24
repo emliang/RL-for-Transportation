@@ -110,16 +110,25 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 2. [DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](https://ieeexplore.ieee.org/abstract/document/8793143)
     1. RL (on policy)
-       1. state: global supply-demand profile
-       2. action
-          1. find another customer
-          2. next zone
+       1. state: global supply-demand profile map
+       2. action (sequentially): follow shorest path
+          1. find another customer 
+          2. next zone 
        3. reward
-          1. 0 for the first customer
-          2. 
+          1. served customer
+          2. detour time
 
 3. [AdaPool: A Diurnal-Adaptive Fleet Management Framework using Model-Free Deep Reinforcement Learning and Change Point Detection. 2021.](https://arxiv.org/pdf/2104.00203.pdf)
+    1. The same as DeepPool
+       1. consider the change of MDP （with different models）
+       2. online Dirichlet change point detection (ODCP) to detect changes
+
+
+
 4. [An Integrated Decomposition and Approximate Dynamic Programming Approach for On-Demand Ride Pooling. 2018. ITS](https://ieeexplore.ieee.org/document/8805157)
+    1. ADP 
+       1. decision (routes is determined using the shortest-path strategy)
+
 5. [Neural Approximate Dynamic Programming for On-Demand Ride-Pooling. 2020. AAAI](https://ojs.aaai.org//index.php/AAAI/article/view/5388)
 
 
