@@ -170,13 +170,65 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 #### Vehicle relocation
 1. [A Cost-Effective Recommender System for Taxi Drivers. 2014. KDD](https://dl.acm.org/doi/pdf/10.1145/2623330.2623668)
-2. [MOVI: A Model-Free Approach to Dynamic Fleet Management. 2018. INFOCOM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8485988)
-3. [Credit Assignment For Collective Multiagent RL With Global Rewards. 2018. NIPS](https://proceedings.neurips.cc/paper/2018/file/94bb077f18daa6620efa5cf6e6f178d2-Paper.pdf)
-4. [Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219993)
-5. [Real-world Ride-hailing Vehicle Repositioning using
+    1. recommend route for vacant vehicles
+       1. segment profit
+          1. earning:
+   ![](2021-10-24-20-31-22.png)
+          2. cost: 
+   ![](2021-10-24-20-31-47.png)
+       2. expected route profits:
+![](2021-10-24-20-32-26.png)
+       3. algorithm 
+          1. Brute-Force based MNP Recommendation
+          2. Recursive Recommendation Strategy
+       4. multi-driver routes recommendation
+          1. recommend the route with the lowest correlationship to the second driver
+
+2. [Optimizing Taxi Driver Profit Efficiency: A Spatial Network-based Markov Decision Process Approach. 2015. Big Data]()
+   1. Defined as MDP:
+      1. calibrate pick probability (discounted by number of taxis)
+      2. passenger destination probability
+   2. solving
+      1. Rolling Horizon:
+      2. DP approach
+         1. discounting pick prob:
+         ![](2021-10-24-21-08-48.png)
+
+
+3. [Optimal Passenger-Seeking Policies on E-hailing Platforms Using Markov Decision Process and Imitation Learning. 2020. TRC](https://arxiv.org/pdf/1905.09906.pdf)
+   1. similar to last one
+      1. long-horizon 
+      2. discounted prob of competing drivers
+   ![](2021-10-24-21-04-29.png) 
+
+
+4. [MOVI: A Model-Free Approach to Dynamic Fleet Management. 2018. INFOCOM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8485988)
+    1. RL (on-policy)
+       1. state: heatmap + CNN
+       2. making decision sequentially for each vehicle
+
+
+5. [Credit Assignment For Collective Multiagent RL With Global Rewards. 2018. NIPS](https://proceedings.neurips.cc/paper/2018/file/94bb077f18daa6620efa5cf6e6f178d2-Paper.pdf)
+    1. MARL (on policy)
+       1. centralize critic + decentralized policy
+       2. conut based global state
+
+
+6. [Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219993)
+    1. RL (on-policy)
+       1. state + contextual features
+       2. action: neighbor girds
+          1. sequentially make decision
+          2. avoid moving in conflict directions
+             1. add collaborative context indicating directions of previous vehicles
+          3. avoid moving to low-value grid
+
+
+7. [Real-world Ride-hailing Vehicle Repositioning using
 Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
-1. [A Markov decision process approach to vacant taxi routing with e-hailing. 2019. TRB.](https://www.sciencedirect.com/science/article/pii/S0191261518303837)
-2. [Optimal Passenger-Seeking Policies on E-hailing Platforms Using Markov Decision Process and Imitation Learning. 2020. TRC](https://arxiv.org/pdf/1905.09906.pdf)
+
+
+
 
 
 
