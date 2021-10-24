@@ -86,21 +86,38 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 1. [Learning to delay in ride-sourcing systems: a multi-agent deep reinforcement learning framework. 2019. TKDE](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9130935)
     1. MARL (on policy)
        1. state: contextual features
-       2. action: {0,1}, enter matching pool or not
+       2. action: {0,1}, match or hold
        3. reward: customer waiting time
           1. weighted global + individual reward
 
 2. [Optimizing matching time intervals for ride-hailing services using reinforcement learning. 2021. TRC](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21002527)
    1. RL (off policy)
       1. state: global grid-based state -> flatten
-      2. action: match or hold
+      2. action: {0,1}, match or hold
       3. reward:
          1. matching wating time
          2. pickup wiating time
 
 #### Order pooling
 1. [Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining. 2018. Big Data](https://ieeexplore.ieee.org/document/8622481)
+   1. RL (on policy)
+      1. state: time & space grid
+      2. action: wait, TK1, TK2
+         1. wait: stay current location
+         2. TK1: pick orders within max pick time
+         3. TK2: TK1 + larger pick time for second order
+      3. reward: effective distance traveled
+
 2. [DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](https://ieeexplore.ieee.org/abstract/document/8793143)
+    1. RL (on policy)
+       1. state: global supply-demand profile
+       2. action
+          1. find another customer
+          2. next zone
+       3. reward
+          1. 0 for the first customer
+          2. 
+
 3. [AdaPool: A Diurnal-Adaptive Fleet Management Framework using Model-Free Deep Reinforcement Learning and Change Point Detection. 2021.](https://arxiv.org/pdf/2104.00203.pdf)
 4. [An Integrated Decomposition and Approximate Dynamic Programming Approach for On-Demand Ride Pooling. 2018. ITS](https://ieeexplore.ieee.org/document/8805157)
 5. [Neural Approximate Dynamic Programming for On-Demand Ride-Pooling. 2020. AAAI](https://ojs.aaai.org//index.php/AAAI/article/view/5388)
