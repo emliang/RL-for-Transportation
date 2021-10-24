@@ -155,9 +155,16 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 
 
+
+
 #### Order pricing
 1. [InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](https://ieeexplore.ieee.org/document/8970929)
+    1. 
+
+
 2. [Path-based dynamic pricing for vehicle allocation in ridesharing systems with fully compliant drivers. 2019. TRB](https://www.sciencedirect.com/science/article/pii/S019126151831141X)
+
+
 
 
 #### Vehicle relocation
