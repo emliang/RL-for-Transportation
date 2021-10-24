@@ -127,9 +127,31 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 4. [An Integrated Decomposition and Approximate Dynamic Programming Approach for On-Demand Ride Pooling. 2018. ITS](https://ieeexplore.ieee.org/document/8805157)
     1. ADP 
-       1. decision (routes is determined using the shortest-path strategy)
+       1. decision 
+          1. routes is determined using the shortest-path strategy
+          2. one decision one assignment
+          3. linear approximation for value function
+          4. linear assignment problem
+             1. dual update
 
 5. [Neural Approximate Dynamic Programming for On-Demand Ride-Pooling. 2020. AAAI](https://ojs.aaai.org//index.php/AAAI/article/view/5388)
+   1. ADP
+      1. decision
+         1. follow shorest path
+         2. generate feasible order combinations
+         3. value approximation: individual value 
+            ![](2021-10-24-20-04-18.png)
+            1. low-dimensional embedding for each location of vehicle
+         4. linear assignment 
+            1. TD update
+6. [Conditional Expectation Based Value Decomposition For Scalable On-demand Ride Pooling]()
+   1. like NeuralADP
+      1.  average of neighbor value to approximate indivadule value:
+      2.  each neighbor value is the conditional expectation of action
+         ![](2021-10-24-20-13-58.png)
+      3. final approximation
+         ![](2021-10-24-20-15-14.png)
+ 
 
 
 
