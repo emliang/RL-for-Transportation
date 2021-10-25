@@ -268,19 +268,48 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 #### Joint dispatching and relocation
 1. [CoRide: Joint Order Dispatching and Fleet Management for Multi-Scale Ride-Hailing Platforms. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357978)
-    1. 
+   1. MARL (on-policy), sequentially decision making
+       1. hierarchical strucutre
+            1. upper level
+               1. generate encoding of env using RNN
+            2. lower level
+               1. using info from upper level, generate prob of different grids
+               2. dispatching and relocating 
+        1. reward
+            1. gap between manager’s entropy and global average entropy
+            2. KL divergence of supplt and demand
+        2. coordination
+            1. using attention to aggregate info of neighbor grids
 
 
-2. [Deep Reinforcement Learning for Multi-Driver Vehicle Dispatching and Repositioning Problem. 2019. ICDM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8970873)
+
+2. [Value Function is All You Need: A Unified Learning Framework for Ride Hailing Platforms. 2021. KDD](https://dl.acm.org/doi/pdf/10.1145/3447548.3467096)
+    1. policy evaluation (off-line)
+    2. on-line updateing
+       1. using current transitions
+![](2021-10-25-14-08-30.png)
+    3. ensemble of offline and online value
+![](2021-10-25-14-09-04.png)
+    4. dispatching: bipartite matching 
+    5. relocaintg: 
+![](2021-10-25-14-10-10.png)
 
 
-3. [Value Function is All You Need: A Unified Learning Framework for Ride Hailing Platforms. 2021. KDD](https://dl.acm.org/doi/pdf/10.1145/3447548.3467096)
+1. [An Integrated Reinforcement Learning and Centralized Programming Approach for Online Taxi Dispatching. 2021. TNNLS](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9366995)
+   1. RL (on-policy)
+      1. centralized programming model
+         1. planning in both dispatching and relocating
+      2. TD learning for updating value function
 
-4. [An Integrated Reinforcement Learning and Centralized Programming Approach for Online Taxi Dispatching. 2021. TNNLS](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9366995)
 
-
-5. [Path-based dynamic pricing for vehicle allocation in ridesharing systems with fully compliant drivers. 2019. TRB](https://www.sciencedirect.com/science/article/pii/S019126151831141X)
-
+2. [Path-based dynamic pricing for vehicle allocation in ridesharing systems with fully compliant drivers. 2019. TRB](https://www.sciencedirect.com/science/article/pii/S019126151831141X)
+    1. ADP (marco level)
+       1. decision
+         1. path based pricing (market cleaning)
+         2. routing after distaching (constrained zone choice)
+         3. order sharing
+         4. relocation
+      1. piece-wise linear approximation of value function
 
 
 
