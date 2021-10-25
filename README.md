@@ -224,8 +224,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
           3. avoid moving to low-value grid
 
 
-7. [Real-world Ride-hailing Vehicle Repositioning using
-Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
+7. [Real-world Ride-hailing Vehicle Repositioning using Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
     1. Policy evaluation (off-line)
        1. time-space value function
    ![](2021-10-25-13-14-16.png)
@@ -235,14 +234,14 @@ Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
           2. Value-based Policy Search (VPS)
              1. one-step:
    ![](2021-10-25-13-17-46.png)
-             2. two-step:
+             1. two-step:
    ![](2021-10-25-13-18-06.png)
-          3. implementation
+          1. implementation
              1. step selection: small works well
              2. long search: choose global top points
              3. contextual value:
     ![](2021-10-25-13-24-29.png)
-             4. SD regulizer
+             1. SD regulizer
                 1. add destination supply-demand gap
    ![](2021-10-25-13-26-06.png)
 
