@@ -43,7 +43,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
         1. $a_{ij}$: matching decision
         2. NP hard combinatorial optimization
            1. HillClimbing Algorithm
-2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. (2018). KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
+2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
    1. bipartite matching + evaluation
 ![](2021-10-22-18-09-56.png)
        1. weight: advantage trick
