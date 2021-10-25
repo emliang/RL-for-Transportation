@@ -243,24 +243,19 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 7. [Real-world Ride-hailing Vehicle Repositioning using Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
     1. Policy evaluation (off-line)
-       1. time-space value function
-   ![](pic/2021-10-25-13-14-16.png)
+       1. time-space value function![](pic/2021-10-25-13-14-16.png)
           1. dual policy evaluation
              1. conditional value: V(s|b)
              2. marginal value: V(s)
           2. Value-based Policy Search (VPS)
-             1. one-step:
-   ![](pic/2021-10-25-13-17-46.png)
-             1. two-step:
-   ![](pic/2021-10-25-13-18-06.png)
-          1. implementation
+             1. one-step:![](pic/2021-10-25-13-17-46.png)
+             2. two-step:![](pic/2021-10-25-13-18-06.png)
+          3. implementation
              1. step selection: small works well
              2. long search: choose global top points
-             3. contextual value:
-    ![](pic/2021-10-25-13-24-29.png)
-             1. SD regulizer
-                1. add destination supply-demand gap
-   ![](pic/2021-10-25-13-26-06.png)
+             3. contextual value:![](pic/2021-10-25-13-24-29.png)
+             4. SD regulizer
+                1. add destination supply-demand gap![](pic/2021-10-25-13-26-06.png)
 
 
 
@@ -286,13 +281,10 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 2. [Value Function is All You Need: A Unified Learning Framework for Ride Hailing Platforms. 2021. KDD](https://dl.acm.org/doi/pdf/10.1145/3447548.3467096)
     1. policy evaluation (off-line)
     2. on-line updateing
-       1. using current transitions
-![](pic/2021-10-25-14-08-30.png)
-    3. ensemble of offline and online value
-![](pic/2021-10-25-14-09-04.png)
+       1. using current transitions![](pic/2021-10-25-14-08-30.png)
+    3. ensemble of offline and online value![](pic/2021-10-25-14-09-04.png)
     4. dispatching: bipartite matching 
-    5. relocaintg: 
-![](pic/2021-10-25-14-10-10.png)
+    5. relocaintg: ![](pic/2021-10-25-14-10-10.png)
 
 
 1. [An Integrated Reinforcement Learning and Centralized Programming Approach for Online Taxi Dispatching. 2021. TNNLS](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9366995)
@@ -330,18 +322,100 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 #### Single-agent
 1. [IntelliLight: A Reinforcement Learning Approach for Intelligent Traffic Light Control. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3220096)
-2. [Learning Traffic Signal Control from Demonstrations. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3358079)
-3. [PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330949)
-4. [PDLight: A Deep Reinforcement Learning Traffic Light Control Algorithm with Pressure and Dynamic Light Duration. 2020](https://arxiv.org/pdf/2009.13711.pdf)
+    1. state:
+![](2021-10-25-19-34-58.png)
+    2. action: {1,0}
+       1. change to the next phase
+       2. keep phase
+    3. reward:
+       1. wighted reward of (queue length, delay, waiting time, light switches, number of vehicles, and travel time)
+    4. algorithm:
+       1. DQN
+
+1. [Learning Traffic Signal Control from Demonstrations. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3358079)
+    1. imitation learning
+       1. actor: ![](2021-10-25-19-38-48.png)
+       2. critic:![](2021-10-25-19-39-39.png)
+
+2. [PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330949)
+    1. state:
+       1. current pahse (one-hot)
+       2. number of vehicles
+    2. action:
+       1. pre-defined phases
+    3. reward:
+       1. pressure for movement: ![](2021-10-25-19-43-27.png)
+       2. total pressure: ![](2021-10-25-19-42-39.png)
+    4. algorithm:
+       1. DQN
+
+3. [PDLight: A Deep Reinforcement Learning Traffic Light Control Algorithm with Pressure and Dynamic Light Duration. 2020](https://arxiv.org/pdf/2009.13711.pdf)
+    1. reward
+       1. Pressure with Remaining Capacity of Outgoing Lane: ![](2021-10-25-19-45-00.png)
+
+
+4. [Learning Phase Competition for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357900)
+    1. state
+       1. current phase (one-hot)
+       2. number of vehicles
+     ![](2021-10-25-19-46-32.png)
+    2. action: 
+       1. pre-defined phases
+    3. reward: 
+       1. queue length
+    4. invariance:
+       1. flip and rotation
+
+
 5. [Toward A Thousand Lights: Decentralized Deep Reinforcement Learning for Large-Scale Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/download/5744/5600)
-6. [Learning Phase Competition for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357900)
-7. [AttendLight: Universal Attention-Based Reinforcement Learning Model for Traffic Signal Control. 2020. NIPS](https://arxiv.org/pdf/2010.05772.pdf)
-8. [GeneraLight: Improving Environment Generalization of Traffic Signal Control via Meta Reinforcement Learning. 2020. CIKM](https://dl.acm.org/doi/pdf/10.1145/3340531.3411859)
-9. [MetaLight: Value-Based Meta-Reinforcement Learning for Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/5467/5323)
+    1. FRAP + pressure reward
+    2. reward:
+       1. pressure based on queuing vehicles
+
+
+6. [AttendLight: Universal Attention-Based Reinforcement Learning Model for Traffic Signal Control. 2020. NIPS](https://arxiv.org/pdf/2010.05772.pdf)
+    1. state
+       1. traffic characteristics in each lane
+            ![](2021-10-25-19-52-11.png) 
+    1. action
+       1. pre-defined phases
+    2. reward
+       1. pressure
+    3. algorithm: 
+       1. PG + MC
+    4. invariance
+       1. topology
+
+
+7. [GeneraLight: Improving Environment Generalization of Traffic Signal Control via Meta Reinforcement Learning. 2020. CIKM](https://dl.acm.org/doi/pdf/10.1145/3340531.3411859)
+    1. gradient-based meta learning
+       1. training agent in clusetered environments
+       2. meta-training
+
+
+8.  [MetaLight: Value-Based Meta-Reinforcement Learning for Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/5467/5323)
+    1.  FRAP + gradient-based meta-learning
    
 #### Multi-agent
 1. [CoLight: Learning Network-level Cooperation for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357902)
-2. [Multi-agent Reinforcement Learning for Networked System Control. 2020. ICLR](https://arxiv.org/pdf/2004.01339.pdf)
-3. [Meta Variationally Intrinsic Motivated Reinforcement Learning for Decentralized Traffic Signal Control. 2021](https://arxiv.org/pdf/2101.00746.pdf)
-4. [Hierarchically and Cooperatively Learning Traffic Signal Control. 2021. AAAI](https://www.aaai.org/AAAI21Papers/AAAI-6437.XuB.pdf)
+   1. information aggregation:
+      1. GAT to aggregation neighbor intersection information
+    ![](2021-10-25-19-59-01.png)
 
+2. [Multi-agent Reinforcement Learning for Networked System Control. 2020. ICLR](https://arxiv.org/pdf/2004.01339.pdf)
+    1. differentiable commnication
+       1. ![](2021-10-25-20-01-14.png)
+
+
+3. [Meta Variationally Intrinsic Motivated Reinforcement Learning for Decentralized Traffic Signal Control. 2021](https://arxiv.org/pdf/2101.00746.pdf)
+    1. intrinsic reward
+       1. error of predict neighbor reward and transitions
+   ![](2021-10-25-20-03-58.png)
+    2. latent variable policy
+       1. RNN encoded environment
+
+4. [Hierarchically and Cooperatively Learning Traffic Signal Control. 2021. AAAI](https://www.aaai.org/AAAI21Papers/AAAI-6437.XuB.pdf)
+    1. Hierarchy
+       1. select sub-policies with different reward function
+    2. weighted local and neighbor reward
+       1. adaptive weighting mechanism
