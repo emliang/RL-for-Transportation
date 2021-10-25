@@ -2,7 +2,7 @@
 Paper list of Reinforcement Learning (RL) applied on transportation
 
 - [RL-for-Transportation](#rl-for-transportation)
-  - [Ride-souring system](#ride-souring-system)
+  - [Ride-sourcing system](#ride-sourcing-system)
     - [Survey](#survey)
     - [Dataset](#dataset)
     - [Competition](#competition)
@@ -24,7 +24,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 
 
-## Ride-souring system
+## Ride-sourcing system
 ### Survey
 1. [Reinforcement Learning for Ridesharing: A Survey. 2021](https://arxiv.org/pdf/2105.01099)
 ### Dataset
