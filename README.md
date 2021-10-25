@@ -212,6 +212,23 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     1. MARL (on policy)
        1. centralize critic + decentralized policy
        2. conut based global state
+     ![](2021-10-25-13-39-50.png)
+       3. difference policy gradient
+            1. Wonderful Life Utility (WLU)
+               1. with and without agent i
+   ![](2021-10-25-13-41-53.png)
+            1. Aristrocratic Utility (AU)
+               1. fix actions of other agents, marginalize agent i
+               2. conterfactual
+   ![](2021-10-25-13-45-36.png)
+        4. approximating central xritic
+           1. linear combination
+              1. individual information
+              2. f without info of other agents
+   ![](2021-10-25-13-46-45.png)
+           2. first-order approximation
+              1. those coefficients are evaluated at the overall state-action counts
+   ![](2021-10-25-13-50-01.png)
 
 
 6. [Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219993)
