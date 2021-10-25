@@ -268,6 +268,8 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 #### Joint dispatching and relocation
 1. [CoRide: Joint Order Dispatching and Fleet Management for Multi-Scale Ride-Hailing Platforms. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357978)
+    1. 
+
 
 2. [Deep Reinforcement Learning for Multi-Driver Vehicle Dispatching and Repositioning Problem. 2019. ICDM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8970873)
 
