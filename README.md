@@ -39,25 +39,25 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 1. [A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](https://dl.acm.org/doi/pdf/10.1145/3097983.3098138)
     1. predict cancellation probability of vehicle-order pair $p_{ij}$
     2. maximize total success rate: 
-        ![](2021-10-22-18-09-24.png)
+        ![](pic/2021-10-22-18-09-24.png)
         1. $a_{ij}$: matching decision
         2. NP hard combinatorial optimization
            1. HillClimbing Algorithm
 2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
    1. bipartite matching + evaluation
-![](2021-10-22-18-09-56.png)
+![](pic/2021-10-22-18-09-56.png)
        1. weight: advantage trick
           1. discounted reward + furture value - current value 
-          ![](2021-10-22-18-11-17.png)
+          ![](pic/2021-10-22-18-11-17.png)
        2. state: time & space zone (no contextual information)
        3. value: policy evaluation (offline)
           
 
 1. [A Deep Value-network Based Approach for Multi-Driver Order Dispatching. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330724)
    1. bipartite matching + policy evaluation
-   ![](2021-10-22-17-57-56.png)
+   ![](pic/2021-10-22-17-57-56.png)
       1. weight: advantage value - distance
-        ![](2021-10-22-18-13-36.png)
+        ![](pic/2021-10-22-18-13-36.png)
       2. state: 
          1. time & space zone + supply-demand info
          2. coarse coding with hierarchical hexagon grid
@@ -78,7 +78,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     1. MARL (on policy)
        1. state: contextual features
        2. TD loss + KL regulizer
-   ![](2021-10-22-21-28-27.png)
+   ![](pic/2021-10-22-21-28-27.png)
           1. regulizer: distribution between order and vehicles
 
 
@@ -140,7 +140,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
          1. follow shorest path
          2. generate feasible order combinations
          3. value approximation: individual value 
-            ![](2021-10-24-20-04-18.png)
+            ![](pic/2021-10-24-20-04-18.png)
             1. low-dimensional embedding for each location of vehicle
          4. linear assignment 
             1. TD update
@@ -148,9 +148,9 @@ Paper list of Reinforcement Learning (RL) applied on transportation
    1. like NeuralADP
       1.  average of neighbor value to approximate indivadule value:
       2.  each neighbor value is the conditional expectation of action
-         ![](2021-10-24-20-13-58.png)
+         ![](pic/2021-10-24-20-13-58.png)
       3. final approximation
-         ![](2021-10-24-20-15-14.png)
+         ![](pic/2021-10-24-20-15-14.png)
  
 
 
@@ -162,7 +162,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     1. RL (on-policy)
        1. use TD learning to calculate furture value
        2. use Contextual Bandit to give price
-![](2021-10-24-20-25-19.png)
+![](pic/2021-10-24-20-25-19.png)
 
 
 
@@ -173,11 +173,11 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     1. recommend route for vacant vehicles
        1. segment profit
           1. earning:
-   ![](2021-10-24-20-31-22.png)
+   ![](pic/2021-10-24-20-31-22.png)
           2. cost: 
-   ![](2021-10-24-20-31-47.png)
+   ![](pic/2021-10-24-20-31-47.png)
        2. expected route profits:
-![](2021-10-24-20-32-26.png)
+![](pic/2021-10-24-20-32-26.png)
        3. algorithm 
           1. Brute-Force based MNP Recommendation
           2. Recursive Recommendation Strategy
@@ -192,14 +192,14 @@ Paper list of Reinforcement Learning (RL) applied on transportation
       1. Rolling Horizon:
       2. DP approach
          1. discounting pick prob:
-         ![](2021-10-24-21-08-48.png)
+         ![](pic/2021-10-24-21-08-48.png)
 
 
 3. [Optimal Passenger-Seeking Policies on E-hailing Platforms Using Markov Decision Process and Imitation Learning. 2020. TRC](https://arxiv.org/pdf/1905.09906.pdf)
    1. similar to last one
       1. long-horizon 
       2. discounted prob of competing drivers
-   ![](2021-10-24-21-04-29.png) 
+   ![](pic/2021-10-24-21-04-29.png) 
 
 
 4. [MOVI: A Model-Free Approach to Dynamic Fleet Management. 2018. INFOCOM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8485988)
@@ -212,23 +212,23 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     1. MARL (on policy)
        1. centralize critic + decentralized policy
        2. conut based global state
-     ![](2021-10-25-13-39-50.png)
+     ![](pic/2021-10-25-13-39-50.png)
        3. difference policy gradient
             1. Wonderful Life Utility (WLU)
                1. with and without agent i
-   ![](2021-10-25-13-41-53.png)
+   ![](pic/2021-10-25-13-41-53.png)
             1. Aristrocratic Utility (AU)
                1. fix actions of other agents, marginalize agent i
                2. conterfactual
-   ![](2021-10-25-13-45-36.png)
+   ![](pic/2021-10-25-13-45-36.png)
         4. approximating central xritic
            1. linear combination
               1. individual information
               2. f without info of other agents
-   ![](2021-10-25-13-46-45.png)
+   ![](pic/2021-10-25-13-46-45.png)
            2. first-order approximation
               1. those coefficients are evaluated at the overall state-action counts
-   ![](2021-10-25-13-50-01.png)
+   ![](pic/2021-10-25-13-50-01.png)
 
 
 6. [Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219993)
@@ -244,23 +244,23 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 7. [Real-world Ride-hailing Vehicle Repositioning using Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
     1. Policy evaluation (off-line)
        1. time-space value function
-   ![](2021-10-25-13-14-16.png)
+   ![](pic/2021-10-25-13-14-16.png)
           1. dual policy evaluation
              1. conditional value: V(s|b)
              2. marginal value: V(s)
           2. Value-based Policy Search (VPS)
              1. one-step:
-   ![](2021-10-25-13-17-46.png)
+   ![](pic/2021-10-25-13-17-46.png)
              1. two-step:
-   ![](2021-10-25-13-18-06.png)
+   ![](pic/2021-10-25-13-18-06.png)
           1. implementation
              1. step selection: small works well
              2. long search: choose global top points
              3. contextual value:
-    ![](2021-10-25-13-24-29.png)
+    ![](pic/2021-10-25-13-24-29.png)
              1. SD regulizer
                 1. add destination supply-demand gap
-   ![](2021-10-25-13-26-06.png)
+   ![](pic/2021-10-25-13-26-06.png)
 
 
 
@@ -287,12 +287,12 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     1. policy evaluation (off-line)
     2. on-line updateing
        1. using current transitions
-![](2021-10-25-14-08-30.png)
+![](pic/2021-10-25-14-08-30.png)
     3. ensemble of offline and online value
-![](2021-10-25-14-09-04.png)
+![](pic/2021-10-25-14-09-04.png)
     4. dispatching: bipartite matching 
     5. relocaintg: 
-![](2021-10-25-14-10-10.png)
+![](pic/2021-10-25-14-10-10.png)
 
 
 1. [An Integrated Reinforcement Learning and Centralized Programming Approach for Online Taxi Dispatching. 2021. TNNLS](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9366995)
