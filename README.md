@@ -9,6 +9,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     - [Book](#book)
     - [Paper](#paper)
       - [Order dispatching](#order-dispatching)
+        - [1. A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](#1-a-taxi-order-dispatch-model-based-on-combinatorial-optimization-2017-kdd)
       - [Order delaying](#order-delaying)
       - [Order pooling](#order-pooling)
       - [Order pricing](#order-pricing)
@@ -36,7 +37,7 @@ Paper list of Reinforcement Learning (RL) applied on transportation
    
 ### Paper
 #### Order dispatching
-1. [A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](https://dl.acm.org/doi/pdf/10.1145/3097983.3098138)
+##### 1. [A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](https://dl.acm.org/doi/pdf/10.1145/3097983.3098138)
     1. predict cancellation probability of vehicle-order pair $p_{ij}$
     2. maximize total success rate: 
         ![](pic/2021-10-22-18-09-24.png)
