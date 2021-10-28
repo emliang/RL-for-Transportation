@@ -10,9 +10,22 @@ Paper list of Reinforcement Learning (RL) applied on transportation
     - [Paper](#paper)
       - [Order dispatching](#order-dispatching)
         - [1. A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](#1-a-taxi-order-dispatch-model-based-on-combinatorial-optimization-2017-kdd)
+        - [2. Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. 2018. KDD](#2-large-scale-order-dispatch-in-on-demand-ride-hailing-platforms-a-learning-and-planning-approach-2018-kdd)
+        - [3. A Deep Value-network Based Approach for Multi-Driver Order Dispatching. 2019. KDD](#3-a-deep-value-network-based-approach-for-multi-driver-order-dispatching-2019-kdd)
+        - [4. Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning. 2019. WWW](#4-efficient-ridesharing-order-dispatching-with-mean-field-multi-agent-reinforcement-learning-2019-www)
+        - [5. Multi-Agent Reinforcement Learning for Order-dispatching via Order-Vehicle Distribution Matching. 2019. CIKM](#5-multi-agent-reinforcement-learning-for-order-dispatching-via-order-vehicle-distribution-matching-2019-cikm)
       - [Order delaying](#order-delaying)
+        - [1. Learning to delay in ride-sourcing systems: a multi-agent deep reinforcement learning framework. 2019. TKDE](#1-learning-to-delay-in-ride-sourcing-systems-a-multi-agent-deep-reinforcement-learning-framework-2019-tkde)
+        - [2. Optimizing matching time intervals for ride-hailing services using reinforcement learning. 2021. TRC](#2-optimizing-matching-time-intervals-for-ride-hailing-services-using-reinforcement-learning-2021-trc)
       - [Order pooling](#order-pooling)
+        - [1. Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining. 2018. Big Data](#1-optimizing-taxi-carpool-policies-via-reinforcement-learning-and-spatio-temporal-mining-2018-big-data)
+        - [2. DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](#2-deeppool-distributed-model-free-algorithm-for-ride-sharing-using-deep-reinforcement-learning-2019-its)
+        - [3. AdaPool: A Diurnal-Adaptive Fleet Management Framework using Model-Free Deep Reinforcement Learning and Change Point Detection. 2021.](#3-adapool-a-diurnal-adaptive-fleet-management-framework-using-model-free-deep-reinforcement-learning-and-change-point-detection-2021)
+        - [4. An Integrated Decomposition and Approximate Dynamic Programming Approach for On-Demand Ride Pooling. 2018. ITS](#4-an-integrated-decomposition-and-approximate-dynamic-programming-approach-for-on-demand-ride-pooling-2018-its)
+        - [5. Neural Approximate Dynamic Programming for On-Demand Ride-Pooling. 2020. AAAI](#5-neural-approximate-dynamic-programming-for-on-demand-ride-pooling-2020-aaai)
+        - [6. Conditional Expectation Based Value Decomposition For Scalable On-demand Ride Pooling](#6-conditional-expectation-based-value-decomposition-for-scalable-on-demand-ride-pooling)
       - [Order pricing](#order-pricing)
+        - [1. InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](#1-inbede-integrating-contextual-bandit-with-td-learning-for-joint-pricing-and-dispatch-of-ride-hailing-platforms-2019-icdm)
       - [Vehicle relocation](#vehicle-relocation)
       - [Joint dispatching and relocation](#joint-dispatching-and-relocation)
   - [Intersection control](#intersection-control)
@@ -38,128 +51,132 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 ### Paper
 #### Order dispatching
 ##### 1. [A Taxi Order Dispatch Model based On Combinatorial Optimization. 2017. KDD](https://dl.acm.org/doi/pdf/10.1145/3097983.3098138)
-    1. predict cancellation probability of vehicle-order pair $p_{ij}$
-    2. maximize total success rate: 
-        ![](pic/2021-10-22-18-09-24.png)
-        1. $a_{ij}$: matching decision
-        2. NP hard combinatorial optimization
-           1. HillClimbing Algorithm
-2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
-   1. bipartite matching + evaluation
+ 1. predict cancellation probability of vehicle-order pair $p_{ij}$
+ 2. maximize total success rate: 
+     ![](pic/2021-10-22-18-09-24.png)
+     1. $a_{ij}$: matching decision
+     2. NP hard combinatorial optimization
+        1. HillClimbing Algorithm
+##### 2. [Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219824)
+
+1. bipartite matching + evaluation
 ![](pic/2021-10-22-18-09-56.png)
-       1. weight: advantage trick
-          1. discounted reward + furture value - current value 
-          ![](pic/2021-10-22-18-11-17.png)
-       2. state: time & space zone (no contextual information)
-       3. value: policy evaluation (offline)
+    1. weight: advantage trick
+       1. discounted reward + furture value - current value 
+       ![](pic/2021-10-22-18-11-17.png)
+    2. state: time & space zone (no contextual information)
+    3. value: policy evaluation (offline)
           
 
-1. [A Deep Value-network Based Approach for Multi-Driver Order Dispatching. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330724)
-   1. bipartite matching + policy evaluation
-   ![](pic/2021-10-22-17-57-56.png)
-      1. weight: advantage value - distance
-        ![](pic/2021-10-22-18-13-36.png)
-      2. state: 
-         1. time & space zone + supply-demand info
-         2. coarse coding with hierarchical hexagon grid
-      3. value (offline)
-         1. policy evaluation: with supply-demand info
-         2. distillation: marginalize time-space value
+##### 3. [A Deep Value-network Based Approach for Multi-Driver Order Dispatching. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330724)
+1. bipartite matching + policy evaluation
+![](pic/2021-10-22-17-57-56.png)
+   1. weight: advantage value - distance
+     ![](pic/2021-10-22-18-13-36.png)
+   2. state: 
+      1. time & space zone + supply-demand info
+      2. coarse coding with hierarchical hexagon grid
+   3. value (offline)
+      1. policy evaluation: with supply-demand info
+      2. distillation: marginalize time-space value
 
-2. [Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning. 2019. WWW](https://dl.acm.org/doi/pdf/10.1145/3308558.3313433)
-    1. MARL (on policy)
-         1. state: contextual information
-         2. acrion: active order pool
-            1. mean action: defined as number of neighbor drivers
-         3. reward:
-            1. order fare
-            2. pick distance
-            3. destination supply-demand gap
-3. [Multi-Agent Reinforcement Learning for Order-dispatching via Order-Vehicle Distribution Matching. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357799)
-    1. MARL (on policy)
-       1. state: contextual features
-       2. TD loss + KL regulizer
-   ![](pic/2021-10-22-21-28-27.png)
-          1. regulizer: distribution between order and vehicles
+##### 4. [Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning. 2019. WWW](https://dl.acm.org/doi/pdf/10.1145/3308558.3313433)
+ 1. MARL (on policy)
+      1. state: contextual information
+      2. acrion: active order pool
+         1. mean action: defined as number of neighbor drivers
+      3. reward:
+         1. order fare
+         2. pick distance
+         3. destination supply-demand gap
+   
+##### 5. [Multi-Agent Reinforcement Learning for Order-dispatching via Order-Vehicle Distribution Matching. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357799)
+ 1. MARL (on policy)
+    1. state: contextual features
+    2. TD loss + KL regulizer
+![](pic/2021-10-22-21-28-27.png)
+       1. regulizer: distribution between order and vehicles
 
 
 #### Order delaying
-1. [Learning to delay in ride-sourcing systems: a multi-agent deep reinforcement learning framework. 2019. TKDE](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9130935)
-    1. MARL (on policy)
-       1. state: contextual features
-       2. action: {0,1}, match or hold
-       3. reward: customer waiting time
-          1. weighted global + individual reward
+##### 1. [Learning to delay in ride-sourcing systems: a multi-agent deep reinforcement learning framework. 2019. TKDE](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9130935)
+ 1. MARL (on policy)
+    1. state: contextual features
+    2. action: {0,1}, match or hold
+    3. reward: customer waiting time
+       1. weighted global + individual reward
 
-2. [Optimizing matching time intervals for ride-hailing services using reinforcement learning. 2021. TRC](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21002527)
-   1. RL (off policy)
-      1. state: global grid-based state -> flatten
-      2. action: {0,1}, match or hold
-      3. reward:
-         1. matching wating time
-         2. pickup wiating time
+##### 2. [Optimizing matching time intervals for ride-hailing services using reinforcement learning. 2021. TRC](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21002527)
+1. RL (off policy)
+   1. state: global grid-based state -> flatten
+   2. action: {0,1}, match or hold
+   3. reward:
+      1. matching wating time
+      2. pickup wiating time
+
 
 #### Order pooling
-1. [Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining. 2018. Big Data](https://ieeexplore.ieee.org/document/8622481)
-   1. RL (on policy)
-      1. state: time & space grid
-      2. action: wait, TK1, TK2
-         1. wait: stay current location
-         2. TK1: pick orders within max pick time
-         3. TK2: TK1 + larger pick time for second order
-      3. reward: effective distance traveled
+##### 1. [Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining. 2018. Big Data](https://ieeexplore.ieee.org/document/8622481)
+1. RL (on policy)
+   1. state: time & space grid
+   2. action: wait, TK1, TK2
+      1. wait: stay current location
+      2. TK1: pick orders within max pick time
+      3. TK2: TK1 + larger pick time for second order
+   3. reward: effective distance traveled
 
-2. [DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](https://ieeexplore.ieee.org/abstract/document/8793143)
-    1. RL (on policy)
-       1. state: global supply-demand profile map
-       2. action (sequentially): follow shorest path
-          1. find another customer 
-          2. next zone 
-       3. reward
-          1. served customer
-          2. detour time
+##### 2. [DeepPool: Distributed Model-free Algorithm for Ride-sharing using Deep Reinforcement Learning. 2019. ITS](https://ieeexplore.ieee.org/abstract/document/8793143)
+ 1. RL (on policy)
+    1. state: global supply-demand profile map
+    2. action (sequentially): follow shorest path
+       1. find another customer 
+       2. next zone 
+    3. reward
+       1. served customer
+       2. detour time
 
-3. [AdaPool: A Diurnal-Adaptive Fleet Management Framework using Model-Free Deep Reinforcement Learning and Change Point Detection. 2021.](https://arxiv.org/pdf/2104.00203.pdf)
-    1. The same as DeepPool
-       1. consider the change of MDP （with different models）
-       2. online Dirichlet change point detection (ODCP) to detect changes
+##### 3. [AdaPool: A Diurnal-Adaptive Fleet Management Framework using Model-Free Deep Reinforcement Learning and Change Point Detection. 2021.](https://arxiv.org/pdf/2104.00203.pdf)
+ 1. The same as DeepPool
+    1. consider the change of MDP （with different models）
+    2. online Dirichlet change point detection (ODCP) to detect changes
 
 
 
-4. [An Integrated Decomposition and Approximate Dynamic Programming Approach for On-Demand Ride Pooling. 2018. ITS](https://ieeexplore.ieee.org/document/8805157)
-    1. ADP 
-       1. decision 
-          1. routes is determined using the shortest-path strategy
-          2. one decision one assignment
-          3. linear approximation for value function
-          4. linear assignment problem
-             1. dual update
+##### 4. [An Integrated Decomposition and Approximate Dynamic Programming Approach for On-Demand Ride Pooling. 2018. ITS](https://ieeexplore.ieee.org/document/8805157)
+ 1. ADP 
+    1. decision 
+       1. routes is determined using the shortest-path strategy
+       2. one decision one assignment
+       3. linear approximation for value function
+       4. linear assignment problem
+          1. dual update
 
-5. [Neural Approximate Dynamic Programming for On-Demand Ride-Pooling. 2020. AAAI](https://ojs.aaai.org//index.php/AAAI/article/view/5388)
-   1. ADP
-      1. decision
-         1. follow shorest path
-         2. generate feasible order combinations
-         3. value approximation: individual value 
-            ![](pic/2021-10-24-20-04-18.png)
-            1. low-dimensional embedding for each location of vehicle
-         4. linear assignment 
-            1. TD update
-6. [Conditional Expectation Based Value Decomposition For Scalable On-demand Ride Pooling]()
-   1. like NeuralADP
-      1.  average of neighbor value to approximate indivadule value:
-      2.  each neighbor value is the conditional expectation of action
-         ![](pic/2021-10-24-20-13-58.png)
-      3. final approximation
-         ![](pic/2021-10-24-20-15-14.png)
- 
+##### 5. [Neural Approximate Dynamic Programming for On-Demand Ride-Pooling. 2020. AAAI](https://ojs.aaai.org//index.php/AAAI/article/view/5388)
+1. ADP
+   1. decision
+      1. follow shorest path
+      2. generate feasible order combinations
+      3. value approximation: individual value 
+         ![](pic/2021-10-24-20-04-18.png)
+         1. low-dimensional embedding for each location of vehicle
+      4. linear assignment 
+         1. TD update
+   
+##### 6. [Conditional Expectation Based Value Decomposition For Scalable On-demand Ride Pooling]()
+1. like NeuralADP
+   1.  average of neighbor value to approximate indivadule value:
+   2.  each neighbor value is the conditional expectation of action
+      ![](pic/2021-10-24-20-13-58.png)
+   3. final approximation
+      ![](pic/2021-10-24-20-15-14.png)
+
 
 
 
 
 
 #### Order pricing
-1. [InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](https://ieeexplore.ieee.org/document/8970929)
+##### 1. [InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](https://ieeexplore.ieee.org/document/8970929)
     1. RL (on-policy)
        1. use TD learning to calculate furture value
        2. use Contextual Bandit to give price
