@@ -27,14 +27,38 @@ Paper list of Reinforcement Learning (RL) applied on transportation
       - [Order pricing](#order-pricing)
         - [1. InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](#1-inbede-integrating-contextual-bandit-with-td-learning-for-joint-pricing-and-dispatch-of-ride-hailing-platforms-2019-icdm)
       - [Vehicle relocation](#vehicle-relocation)
+        - [1. A Cost-Effective Recommender System for Taxi Drivers. 2014. KDD](#1-a-cost-effective-recommender-system-for-taxi-drivers-2014-kdd)
+        - [2. Optimizing Taxi Driver Profit Efficiency: A Spatial Network-based Markov Decision Process Approach. 2015. Big Data](#2-optimizing-taxi-driver-profit-efficiency-a-spatial-network-based-markov-decision-process-approach-2015-big-data)
+        - [3. Optimal Passenger-Seeking Policies on E-hailing Platforms Using Markov Decision Process and Imitation Learning. 2020. TRC](#3-optimal-passenger-seeking-policies-on-e-hailing-platforms-using-markov-decision-process-and-imitation-learning-2020-trc)
+        - [4. MOVI: A Model-Free Approach to Dynamic Fleet Management. 2018. INFOCOM](#4-movi-a-model-free-approach-to-dynamic-fleet-management-2018-infocom)
+        - [5. Credit Assignment For Collective Multiagent RL With Global Rewards. 2018. NIPS](#5-credit-assignment-for-collective-multiagent-rl-with-global-rewards-2018-nips)
+        - [6. Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. 2018. KDD](#6-efficient-large-scale-fleet-management-via-multi-agent-deep-reinforcement-learning-2018-kdd)
+        - [7. Real-world Ride-hailing Vehicle Repositioning using Deep Reinforcement Learning. 2020. NIPS](#7-real-world-ride-hailing-vehicle-repositioning-using-deep-reinforcement-learning-2020-nips)
       - [Joint dispatching and relocation](#joint-dispatching-and-relocation)
+        - [1. CoRide: Joint Order Dispatching and Fleet Management for Multi-Scale Ride-Hailing Platforms. 2019. CIKM](#1-coride-joint-order-dispatching-and-fleet-management-for-multi-scale-ride-hailing-platforms-2019-cikm)
+        - [2. Value Function is All You Need: A Unified Learning Framework for Ride Hailing Platforms. 2021. KDD](#2-value-function-is-all-you-need-a-unified-learning-framework-for-ride-hailing-platforms-2021-kdd)
+        - [3. An Integrated Reinforcement Learning and Centralized Programming Approach for Online Taxi Dispatching. 2021. TNNLS](#3-an-integrated-reinforcement-learning-and-centralized-programming-approach-for-online-taxi-dispatching-2021-tnnls)
+        - [4. Path-based dynamic pricing for vehicle allocation in ridesharing systems with fully compliant drivers. 2019. TRB](#4-path-based-dynamic-pricing-for-vehicle-allocation-in-ridesharing-systems-with-fully-compliant-drivers-2019-trb)
   - [Intersection control](#intersection-control)
     - [Survey](#survey-1)
     - [Dataset](#dataset-1)
     - [Competition](#competition-1)
     - [Paper](#paper-1)
       - [Single-agent](#single-agent)
+        - [1. IntelliLight: A Reinforcement Learning Approach for Intelligent Traffic Light Control. 2018. KDD](#1-intellilight-a-reinforcement-learning-approach-for-intelligent-traffic-light-control-2018-kdd)
+        - [2. Learning Traffic Signal Control from Demonstrations. 2019. CIKM](#2-learning-traffic-signal-control-from-demonstrations-2019-cikm)
+        - [3. PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network. 2019. KDD](#3-presslight-learning-max-pressure-control-to-coordinate-traffic-signals-in-arterial-network-2019-kdd)
+        - [4. PDLight: A Deep Reinforcement Learning Traffic Light Control Algorithm with Pressure and Dynamic Light Duration. 2020](#4-pdlight-a-deep-reinforcement-learning-traffic-light-control-algorithm-with-pressure-and-dynamic-light-duration-2020)
+        - [5. Learning Phase Competition for Traffic Signal Control. 2019. CIKM](#5-learning-phase-competition-for-traffic-signal-control-2019-cikm)
+        - [6. Toward A Thousand Lights: Decentralized Deep Reinforcement Learning for Large-Scale Traffic Signal Control. 2020. AAAI](#6-toward-a-thousand-lights-decentralized-deep-reinforcement-learning-for-large-scale-traffic-signal-control-2020-aaai)
+        - [7. AttendLight: Universal Attention-Based Reinforcement Learning Model for Traffic Signal Control. 2020. NIPS](#7-attendlight-universal-attention-based-reinforcement-learning-model-for-traffic-signal-control-2020-nips)
+        - [8. GeneraLight: Improving Environment Generalization of Traffic Signal Control via Meta Reinforcement Learning. 2020. CIKM](#8-generalight-improving-environment-generalization-of-traffic-signal-control-via-meta-reinforcement-learning-2020-cikm)
+        - [9.  MetaLight: Value-Based Meta-Reinforcement Learning for Traffic Signal Control. 2020. AAAI](#9--metalight-value-based-meta-reinforcement-learning-for-traffic-signal-control-2020-aaai)
       - [Multi-agent](#multi-agent)
+        - [1. CoLight: Learning Network-level Cooperation for Traffic Signal Control. 2019. CIKM](#1-colight-learning-network-level-cooperation-for-traffic-signal-control-2019-cikm)
+        - [2. Multi-agent Reinforcement Learning for Networked System Control. 2020. ICLR](#2-multi-agent-reinforcement-learning-for-networked-system-control-2020-iclr)
+        - [3. Meta Variationally Intrinsic Motivated Reinforcement Learning for Decentralized Traffic Signal Control. 2021](#3-meta-variationally-intrinsic-motivated-reinforcement-learning-for-decentralized-traffic-signal-control-2021)
+        - [4. Hierarchically and Cooperatively Learning Traffic Signal Control. 2021. AAAI](#4-hierarchically-and-cooperatively-learning-traffic-signal-control-2021-aaai)
 
 
 
@@ -177,9 +201,9 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 #### Order pricing
 ##### 1. [InBEDE: Integrating Contextual Bandit with TD Learning for Joint Pricing and Dispatch of Ride-Hailing Platforms. 2019. ICDM](https://ieeexplore.ieee.org/document/8970929)
-    1. RL (on-policy)
-       1. use TD learning to calculate furture value
-       2. use Contextual Bandit to give price
+ 1. RL (on-policy)
+    1. use TD learning to calculate furture value
+    2. use Contextual Bandit to give price
 ![](pic/2021-10-24-20-25-19.png)
 
 
@@ -187,139 +211,139 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 
 
 #### Vehicle relocation
-1. [A Cost-Effective Recommender System for Taxi Drivers. 2014. KDD](https://dl.acm.org/doi/pdf/10.1145/2623330.2623668)
-    1. recommend route for vacant vehicles
-       1. segment profit
-          1. earning:
-   ![](pic/2021-10-24-20-31-22.png)
-          2. cost: 
-   ![](pic/2021-10-24-20-31-47.png)
-       2. expected route profits:
+##### 1. [A Cost-Effective Recommender System for Taxi Drivers. 2014. KDD](https://dl.acm.org/doi/pdf/10.1145/2623330.2623668)
+ 1. recommend route for vacant vehicles
+    1. segment profit
+       1. earning:
+![](pic/2021-10-24-20-31-22.png)
+       2. cost: 
+![](pic/2021-10-24-20-31-47.png)
+    2. expected route profits:
 ![](pic/2021-10-24-20-32-26.png)
-       3. algorithm 
-          1. Brute-Force based MNP Recommendation
-          2. Recursive Recommendation Strategy
-       4. multi-driver routes recommendation
-          1. recommend the route with the lowest correlationship to the second driver
+    3. algorithm 
+       1. Brute-Force based MNP Recommendation
+       2. Recursive Recommendation Strategy
+    4. multi-driver routes recommendation
+       1. recommend the route with the lowest correlationship to the second driver
 
-2. [Optimizing Taxi Driver Profit Efficiency: A Spatial Network-based Markov Decision Process Approach. 2015. Big Data]()
-   1. Defined as MDP:
-      1. calibrate pick probability (discounted by number of taxis)
-      2. passenger destination probability
-   2. solving
-      1. Rolling Horizon:
-      2. DP approach
-         1. discounting pick prob:
-         ![](pic/2021-10-24-21-08-48.png)
-
-
-3. [Optimal Passenger-Seeking Policies on E-hailing Platforms Using Markov Decision Process and Imitation Learning. 2020. TRC](https://arxiv.org/pdf/1905.09906.pdf)
-   1. similar to last one
-      1. long-horizon 
-      2. discounted prob of competing drivers
-   ![](pic/2021-10-24-21-04-29.png) 
+##### 2. [Optimizing Taxi Driver Profit Efficiency: A Spatial Network-based Markov Decision Process Approach. 2015. Big Data]()
+1. Defined as MDP:
+   1. calibrate pick probability (discounted by number of taxis)
+   2. passenger destination probability
+2. solving
+   1. Rolling Horizon:
+   2. DP approach
+      1. discounting pick prob:
+      ![](pic/2021-10-24-21-08-48.png)
 
 
-4. [MOVI: A Model-Free Approach to Dynamic Fleet Management. 2018. INFOCOM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8485988)
-    1. RL (on-policy)
-       1. state: heatmap + CNN
-       2. making decision sequentially for each vehicle
+##### 3. [Optimal Passenger-Seeking Policies on E-hailing Platforms Using Markov Decision Process and Imitation Learning. 2020. TRC](https://arxiv.org/pdf/1905.09906.pdf)
+1. similar to last one
+   1. long-horizon 
+   2. discounted prob of competing drivers
+![](pic/2021-10-24-21-04-29.png) 
 
 
-5. [Credit Assignment For Collective Multiagent RL With Global Rewards. 2018. NIPS](https://proceedings.neurips.cc/paper/2018/file/94bb077f18daa6620efa5cf6e6f178d2-Paper.pdf)
-    1. MARL (on policy)
-       1. centralize critic + decentralized policy
-       2. conut based global state
-     ![](pic/2021-10-25-13-39-50.png)
-       3. difference policy gradient
-            1. Wonderful Life Utility (WLU)
-               1. with and without agent i
-   ![](pic/2021-10-25-13-41-53.png)
-            1. Aristrocratic Utility (AU)
-               1. fix actions of other agents, marginalize agent i
-               2. conterfactual
-   ![](pic/2021-10-25-13-45-36.png)
-        4. approximating central xritic
-           1. linear combination
-              1. individual information
-              2. f without info of other agents
-   ![](pic/2021-10-25-13-46-45.png)
-           2. first-order approximation
-              1. those coefficients are evaluated at the overall state-action counts
-   ![](pic/2021-10-25-13-50-01.png)
+##### 4. [MOVI: A Model-Free Approach to Dynamic Fleet Management. 2018. INFOCOM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8485988)
+ 1. RL (on-policy)
+    1. state: heatmap + CNN
+    2. making decision sequentially for each vehicle
 
 
-6. [Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219993)
-    1. RL (on-policy)
-       1. state + contextual features
-       2. action: neighbor girds
-          1. sequentially make decision
-          2. avoid moving in conflict directions
-             1. add collaborative context indicating directions of previous vehicles
-          3. avoid moving to low-value grid
+##### 5. [Credit Assignment For Collective Multiagent RL With Global Rewards. 2018. NIPS](https://proceedings.neurips.cc/paper/2018/file/94bb077f18daa6620efa5cf6e6f178d2-Paper.pdf)
+ 1. MARL (on policy)
+    1. centralize critic + decentralized policy
+    2. conut based global state
+  ![](pic/2021-10-25-13-39-50.png)
+    1. difference policy gradient
+         1. Wonderful Life Utility (WLU)
+            1. with and without agent i
+![](pic/2021-10-25-13-41-53.png)
+         1. Aristrocratic Utility (AU)
+            1. fix actions of other agents, marginalize agent i
+            2. conterfactual
+![](pic/2021-10-25-13-45-36.png)
+     1. approximating central xritic
+        1. linear combination
+           1. individual information
+           2. f without info of other agents
+![](pic/2021-10-25-13-46-45.png)
+        1. first-order approximation
+           1. those coefficients are evaluated at the overall state-action counts
+![](pic/2021-10-25-13-50-01.png)
 
 
-7. [Real-world Ride-hailing Vehicle Repositioning using Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
-    1. Policy evaluation (off-line)
-       1. time-space value function![](pic/2021-10-25-13-14-16.png)
-          1. dual policy evaluation
-             1. conditional value: V(s|b)
-             2. marginal value: V(s)
-          2. Value-based Policy Search (VPS)
-             1. one-step:![](pic/2021-10-25-13-17-46.png)
-             2. two-step:![](pic/2021-10-25-13-18-06.png)
-          3. implementation
-             1. step selection: small works well
-             2. long search: choose global top points
-             3. contextual value:![](pic/2021-10-25-13-24-29.png)
-             4. SD regulizer
-                1. add destination supply-demand gap![](pic/2021-10-25-13-26-06.png)
+##### 6. [Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3219993)
+ 1. RL (on-policy)
+    1. state + contextual features
+    2. action: neighbor girds
+       1. sequentially make decision
+       2. avoid moving in conflict directions
+          1. add collaborative context indicating directions of previous vehicles
+       3. avoid moving to low-value grid
+
+
+##### 7. [Real-world Ride-hailing Vehicle Repositioning using Deep Reinforcement Learning. 2020. NIPS](https://arxiv.org/pdf/2103.04555.pdf)
+ 1. Policy evaluation (off-line)
+    1. time-space value function![](pic/2021-10-25-13-14-16.png)
+       1. dual policy evaluation
+          1. conditional value: V(s|b)
+          2. marginal value: V(s)
+       2. Value-based Policy Search (VPS)
+          1. one-step:![](pic/2021-10-25-13-17-46.png)
+          2. two-step:![](pic/2021-10-25-13-18-06.png)
+       3. implementation
+          1. step selection: small works well
+          2. long search: choose global top points
+          3. contextual value:![](pic/2021-10-25-13-24-29.png)
+          4. SD regulizer
+             1. add destination supply-demand gap![](pic/2021-10-25-13-26-06.png)
 
 
 
 
 
 #### Joint dispatching and relocation
-1. [CoRide: Joint Order Dispatching and Fleet Management for Multi-Scale Ride-Hailing Platforms. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357978)
-   1. MARL (on-policy), sequentially decision making
-       1. hierarchical strucutre
-            1. upper level
-               1. generate encoding of env using RNN
-            2. lower level
-               1. using info from upper level, generate prob of different grids
-               2. dispatching and relocating 
-        1. reward
-            1. gap between manager’s entropy and global average entropy
-            2. KL divergence of supplt and demand
-        2. coordination
-            1. using attention to aggregate info of neighbor grids
+##### 1. [CoRide: Joint Order Dispatching and Fleet Management for Multi-Scale Ride-Hailing Platforms. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357978)
+1. MARL (on-policy), sequentially decision making
+    1. hierarchical strucutre
+         1. upper level
+            1. generate encoding of env using RNN
+         2. lower level
+            1. using info from upper level, generate prob of different grids
+            2. dispatching and relocating 
+     1. reward
+         1. gap between manager’s entropy and global average entropy
+         2. KL divergence of supplt and demand
+     2. coordination
+         1. using attention to aggregate info of neighbor grids
 
 
 
-2. [Value Function is All You Need: A Unified Learning Framework for Ride Hailing Platforms. 2021. KDD](https://dl.acm.org/doi/pdf/10.1145/3447548.3467096)
-    1. policy evaluation (off-line)
-    2. on-line updateing
-       1. using current transitions![](pic/2021-10-25-14-08-30.png)
-    3. ensemble of offline and online value![](pic/2021-10-25-14-09-04.png)
-    4. dispatching: bipartite matching 
-    5. relocaintg: ![](pic/2021-10-25-14-10-10.png)
+##### 2. [Value Function is All You Need: A Unified Learning Framework for Ride Hailing Platforms. 2021. KDD](https://dl.acm.org/doi/pdf/10.1145/3447548.3467096)
+ 1. policy evaluation (off-line)
+ 2. on-line updateing
+    1. using current transitions![](pic/2021-10-25-14-08-30.png)
+ 3. ensemble of offline and online value![](pic/2021-10-25-14-09-04.png)
+ 4. dispatching: bipartite matching 
+ 5. relocaintg: ![](pic/2021-10-25-14-10-10.png)
 
 
-1. [An Integrated Reinforcement Learning and Centralized Programming Approach for Online Taxi Dispatching. 2021. TNNLS](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9366995)
-   1. RL (on-policy)
-      1. centralized programming model
-         1. planning in both dispatching and relocating
-      2. TD learning for updating value function
+##### 3. [An Integrated Reinforcement Learning and Centralized Programming Approach for Online Taxi Dispatching. 2021. TNNLS](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9366995)
+1. RL (on-policy)
+   1. centralized programming model
+      1. planning in both dispatching and relocating
+   2. TD learning for updating value function
 
 
-2. [Path-based dynamic pricing for vehicle allocation in ridesharing systems with fully compliant drivers. 2019. TRB](https://www.sciencedirect.com/science/article/pii/S019126151831141X)
-    1. ADP (marco level)
-       1. decision
-         1. path based pricing (market cleaning)
-         2. routing after distaching (constrained zone choice)
-         3. order sharing
-         4. relocation
-      1. piece-wise linear approximation of value function
+##### 4. [Path-based dynamic pricing for vehicle allocation in ridesharing systems with fully compliant drivers. 2019. TRB](https://www.sciencedirect.com/science/article/pii/S019126151831141X)
+ 1. ADP (marco level)
+    1. decision
+      1. path based pricing (market cleaning)
+      2. routing after distaching (constrained zone choice)
+      3. order sharing
+      4. relocation
+   1. piece-wise linear approximation of value function
 
 
 
@@ -339,101 +363,103 @@ Paper list of Reinforcement Learning (RL) applied on transportation
 ### Paper
 
 #### Single-agent
-1. [IntelliLight: A Reinforcement Learning Approach for Intelligent Traffic Light Control. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3220096)
-    1. state:
+##### 1. [IntelliLight: A Reinforcement Learning Approach for Intelligent Traffic Light Control. 2018. KDD](https://dl.acm.org/doi/pdf/10.1145/3219819.3220096)
+ 1. state:
 ![](pic/2021-10-25-19-34-58.png)
-    2. action: {1,0}
-       1. change to the next phase
-       2. keep phase
-    3. reward:
-       1. wighted reward of (queue length, delay, waiting time, light switches, number of vehicles, and travel time)
-    4. algorithm:
-       1. DQN
+ 2. action: {1,0}
+    1. change to the next phase
+    2. keep phase
+ 3. reward:
+    1. wighted reward of (queue length, delay, waiting time, light switches, number of vehicles, and travel time)
+ 4. algorithm:
+    1. DQN
 
-1. [Learning Traffic Signal Control from Demonstrations. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3358079)
+##### 2. [Learning Traffic Signal Control from Demonstrations. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3358079)
     1. imitation learning
        1. actor: ![](pic/2021-10-25-19-38-48.png)
        2. critic:![](pic/2021-10-25-19-39-39.png)
 
-2. [PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330949)
-    1. state:
-       1. current pahse (one-hot)
-       2. number of vehicles
-    2. action:
-       1. pre-defined phases
-    3. reward:
-       1. pressure for movement: ![](pic/2021-10-25-19-43-27.png)
-       2. total pressure: ![](pic/2021-10-25-19-42-39.png)
-    4. algorithm:
-       1. DQN
+##### 3. [PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network. 2019. KDD](https://dl.acm.org/doi/pdf/10.1145/3292500.3330949)
+ 1. state:
+    1. current pahse (one-hot)
+    2. number of vehicles
+ 2. action:
+    1. pre-defined phases
+ 3. reward:
+    1. pressure for movement: ![](pic/2021-10-25-19-43-27.png)
+    2. total pressure: ![](pic/2021-10-25-19-42-39.png)
+ 4. algorithm:
+    1. DQN
 
-3. [PDLight: A Deep Reinforcement Learning Traffic Light Control Algorithm with Pressure and Dynamic Light Duration. 2020](https://arxiv.org/pdf/2009.13711.pdf)
-    1. reward
-       1. Pressure with Remaining Capacity of Outgoing Lane: ![](pic/2021-10-25-19-45-00.png)
-
-
-4. [Learning Phase Competition for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357900)
-    1. state
-       1. current phase (one-hot)
-       2. number of vehicles
-     ![](pic/2021-10-25-19-46-32.png)
-    2. action: 
-       1. pre-defined phases
-    3. reward: 
-       1. queue length
-    4. invariance:
-       1. flip and rotation
+##### 4. [PDLight: A Deep Reinforcement Learning Traffic Light Control Algorithm with Pressure and Dynamic Light Duration. 2020](https://arxiv.org/pdf/2009.13711.pdf)
+ 1. reward
+    1. Pressure with Remaining Capacity of Outgoing Lane: ![](pic/2021-10-25-19-45-00.png)
 
 
-5. [Toward A Thousand Lights: Decentralized Deep Reinforcement Learning for Large-Scale Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/download/5744/5600)
+##### 5. [Learning Phase Competition for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357900)
+ 1. state
+    1. current phase (one-hot)
+    2. number of vehicles
+  ![](pic/2021-10-25-19-46-32.png)
+ 2. action: 
+    1. pre-defined phases
+ 3. reward: 
+    1. queue length
+ 4. invariance:
+    1. flip and rotation
+
+
+##### 6. [Toward A Thousand Lights: Decentralized Deep Reinforcement Learning for Large-Scale Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/download/5744/5600)
     1. FRAP + pressure reward
     2. reward:
        1. pressure based on queuing vehicles
 
 
-6. [AttendLight: Universal Attention-Based Reinforcement Learning Model for Traffic Signal Control. 2020. NIPS](https://arxiv.org/pdf/2010.05772.pdf)
-    1. state
-       1. traffic characteristics in each lane
-            ![](pic/2021-10-25-19-52-11.png) 
-    1. action
-       1. pre-defined phases
-    2. reward
-       1. pressure
-    3. algorithm: 
-       1. PG + MC
-    4. invariance
-       1. topology
+##### 7. [AttendLight: Universal Attention-Based Reinforcement Learning Model for Traffic Signal Control. 2020. NIPS](https://arxiv.org/pdf/2010.05772.pdf)
+ 1. state
+    1. traffic characteristics in each lane
+         ![](pic/2021-10-25-19-52-11.png) 
+ 2. action
+    1. pre-defined phases
+ 3. reward
+    1. pressure
+ 4. algorithm: 
+    1. PG + MC
+ 5. invariance
+    1. topology
 
 
-7. [GeneraLight: Improving Environment Generalization of Traffic Signal Control via Meta Reinforcement Learning. 2020. CIKM](https://dl.acm.org/doi/pdf/10.1145/3340531.3411859)
-    1. gradient-based meta learning
-       1. training agent in clusetered environments
-       2. meta-training
+##### 8. [GeneraLight: Improving Environment Generalization of Traffic Signal Control via Meta Reinforcement Learning. 2020. CIKM](https://dl.acm.org/doi/pdf/10.1145/3340531.3411859)
+ 1. gradient-based meta learning
+    1. training agent in clusetered environments
+    2. meta-training
 
 
-8.  [MetaLight: Value-Based Meta-Reinforcement Learning for Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/5467/5323)
-    1.  FRAP + gradient-based meta-learning
+##### 9.  [MetaLight: Value-Based Meta-Reinforcement Learning for Traffic Signal Control. 2020. AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/5467/5323)
+ 1.  FRAP + gradient-based meta-learning
    
+
+
 #### Multi-agent
-1. [CoLight: Learning Network-level Cooperation for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357902)
-   1. information aggregation:
-      1. GAT to aggregation neighbor intersection information
-    ![](pic/2021-10-25-19-59-01.png)
+##### 1. [CoLight: Learning Network-level Cooperation for Traffic Signal Control. 2019. CIKM](https://dl.acm.org/doi/pdf/10.1145/3357384.3357902)
+1. information aggregation:
+  1. GAT to aggregation neighbor intersection information
+![](pic/2021-10-25-19-59-01.png)
 
-2. [Multi-agent Reinforcement Learning for Networked System Control. 2020. ICLR](https://arxiv.org/pdf/2004.01339.pdf)
-    1. differentiable commnication
-       1. ![](pic/2021-10-25-20-01-14.png)
+##### 2. [Multi-agent Reinforcement Learning for Networked System Control. 2020. ICLR](https://arxiv.org/pdf/2004.01339.pdf)
+ 1. differentiable commnication
+    1. ![](pic/2021-10-25-20-01-14.png)
 
 
-3. [Meta Variationally Intrinsic Motivated Reinforcement Learning for Decentralized Traffic Signal Control. 2021](https://arxiv.org/pdf/2101.00746.pdf)
-    1. intrinsic reward
-       1. error of predict neighbor reward and transitions
-   ![](pic/2021-10-25-20-03-58.png)
-    2. latent variable policy
-       1. RNN encoded environment
+##### 3. [Meta Variationally Intrinsic Motivated Reinforcement Learning for Decentralized Traffic Signal Control. 2021](https://arxiv.org/pdf/2101.00746.pdf)
+ 1. intrinsic reward
+    1. error of predict neighbor reward and transitions
+![](pic/2021-10-25-20-03-58.png)
+ 1. latent variable policy
+    1. RNN encoded environment
 
-4. [Hierarchically and Cooperatively Learning Traffic Signal Control. 2021. AAAI](https://www.aaai.org/AAAI21Papers/AAAI-6437.XuB.pdf)
-    1. Hierarchy
-       1. select sub-policies with different reward function
-    2. weighted local and neighbor reward
-       1. adaptive weighting mechanism
+##### 4. [Hierarchically and Cooperatively Learning Traffic Signal Control. 2021. AAAI](https://www.aaai.org/AAAI21Papers/AAAI-6437.XuB.pdf)
+ 1. Hierarchy
+    1. select sub-policies with different reward function
+ 2. weighted local and neighbor reward
+    1. adaptive weighting mechanism
